@@ -5,25 +5,24 @@
 const confirmar = document.getElementById("confirmar");
 const mensagem = document.getElementById("mensagem");
 
-formulario.addEventListener("submit",function(e) {
+formulario.addEventListener("submit", function(e) {
     e.preventDefault();
      
     if(
         nome.value === "" ||
-        telefone.value ==="" ||
-        senha.value ==="" ||
-        confirma.value ==="" 
+        telefone.value === "" ||
+        senha.value === "" ||
+        confirmar.value === ""
     ){
        mensagem.textContent = "Preencha todos os campos";
        mensagem.style.color = "red"; 
     }else if(senha.value !== confirmar.value){
-        mensagem.textContent="As senhas não coincidem";
-        mensagem.style.color ="red";
-        mensagem.style.backgroundColor="black";  
+        mensagem.textContent = "As senhas não coincidem";
+        mensagem.style.color = "red";
+        mensagem.style.backgroundColor = "black";  
     }else{
-        mensagem.textContent="Cadastro Realizado Com Sucesso !!!!";
-        mensagem.style.color="green";
-        mensagem.style.backgroundColor="white ";
+        mensagem.textContent = "Cadastro Realizado Com Sucesso!!!!";
+        mensagem.style.color = "green";
+        mensagem.style.backgroundColor = "white ";
     }
-
 });
